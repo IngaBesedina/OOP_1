@@ -65,6 +65,8 @@ if __name__ == '__main__':
 
     e1.read()
     e1.display()
+    print(e1.power())
 
     e2 = make_exponentiation(0.5, 0.2)
+    e2.display()
     print(e2.power())
