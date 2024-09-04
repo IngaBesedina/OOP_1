@@ -68,15 +68,3 @@ if __name__ == '__main__':
 
     e2 = make_exponentiation(0.5, 0.2)
     print(e2.power())
-
-    
-
-    
-
-    
-    
-    
-
-
-
-        
