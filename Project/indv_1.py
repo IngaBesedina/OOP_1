@@ -2,7 +2,19 @@
 # -*- coding: utf-8 -*-
 
 
-import math
+"""
+Вариант 2
+Парой называется класс с двумя полями,обычно имеющими имена first и second.
+Требуется реализовать тип данных с помощью такого класса.
+Поле first — дробное число; поле second — дробное число, показатель степени.
+Реализовать метод power() — возведение числа first в c тепень second.
+Метод должен правильно работать при любых допустимых значениях first и second.
+Реализовать внешнюю функцию с именем make_тип().
+Функция должна получать в качестве аргументов значения для полей структуры
+и возвращать структуру требуемого типа.
+В раздел программы,  после инструкции if __name__ = '__main__':
+добавить код, демонстрирующий возможности разработанного класса.
+"""
 
 
 def make_exponentiation(a, b):
@@ -35,16 +47,16 @@ class Exponentiation:
         return self.__exponent
 
     def read(self):
-        line = input('Введите: ')
-        parts = list(line.split('^', maxsplit=1))
+        line = input("Введите: ")
+        parts = list(line.split("^", maxsplit=1))
 
         if "," in line:
             raise ValueError
         elif "/" in line:
             num_exp = []
             for part in parts:
-                temp = list(map(int,part.split('/', maxsplit=1)))
-                num_exp.append(temp[0]/temp[1])
+                temp = list(map(int, part.split("/", maxsplit=1)))
+                num_exp.append(temp[0] / temp[1])
 
             self.__number = num_exp[0]
             self.__exponent = num_exp[1]
@@ -56,11 +68,11 @@ class Exponentiation:
         print(f"{self.__number}^{self.__exponent}")
 
     def power(self):
-        return math.pow(self.number, self.exponent)
+        return self.number**self.exponent
 
 
-if __name__ == '__main__':
-    e1 = make_exponentiation(1/2, 1/5)
+if __name__ == "__main__":
+    e1 = make_exponentiation(1 / 2, 1 / 5)
     e1.display()
 
     e1.read()
